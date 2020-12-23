@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache_php-deployment
+  labels:
+    app: apache_php
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apache_php
+  template:
+    metadata:
+      labels:
+        app: apache_php
+      spec:
+        containers:
+        - name: apache_php
+          image: ferred/lap_shippingchallenge
+          ports:
+          - containerPort: 8000
+
