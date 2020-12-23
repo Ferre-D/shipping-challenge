@@ -12,9 +12,9 @@ spec:
       labels:
         app: apache_php
     spec:
-      containers:
-      - name: apache_php
-        image: ferred/lap_shippingchallenge
-        ports:
-        - containerPort: 8000
+     containers:
+     - name: apache_php
+       image: ferred/lap_shippingchallenge
+       ports:
+       - containerPort: 8000
 
