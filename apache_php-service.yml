@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: apache_php-service
+  name: apache-php-service
 spec:
   selector:
-    app: apache_php
+    app: apache-php
   ports:
     - protocol: TCP
       port: 80

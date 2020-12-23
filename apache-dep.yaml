@@ -1,19 +1,19 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: apache_php-deployment
+  name: apache-php-deployment
 spec:
   selector:
     matchLabels:
-      app: apache_php
+      app: apache-php
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: apache_php
+        app: apache-php
     spec:
      containers:
-     - name: apache_php
+     - name: apache-php
        image: ferred/lap_shippingchallenge
        ports:
        - containerPort: 8000
