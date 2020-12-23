@@ -1,11 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: apache-php-service
+  name: shippingchallenge
 spec:
   selector:
-    app: apache-php
+    app: shippingchallenge
   ports:
-    - protocol: TCP
+    - name: apache-php
+      protocol: TCP
       port: 80
       targetPort: 8000
+    - name: postgreSQL
+      protocol: TCP
+      port: 5432
+      targetPort: 5432
