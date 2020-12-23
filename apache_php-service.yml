@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache_php-service
+spec:
+  selector:
+    app: apache_php
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
