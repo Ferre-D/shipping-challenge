@@ -2,23 +2,30 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: shippingchallenge-deployment
+  labels:
+    app: shippingchallenge-deployment
 spec:
+  replicas: 1 # tells deployment to run 2 pods matching the template
   selector:
     matchLabels:
-      app: shippingchallenge
-  replicas: 2 # tells deployment to run 2 pods matching the template
+      app: shippingchallenge-deployment
   template:
     metadata:
       labels:
-        app: shippingchallenge
+        app: shippingchallenge-deployment
     spec:
      containers:
      - name: apache-php
        image: ferred/lap_shippingchallenge
+       imagePullPolicy: Always
        ports:
        - containerPort: 8000
      - name: postgresql
        image: ferred/postgres_shippingchallenge
+       envFrom:
+         - configMapRef:
+             name: config-postgresql
+       imagePullPolicy: Always
        ports:
        - containerPort: 5432
 
