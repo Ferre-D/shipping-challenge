@@ -13,9 +13,9 @@ spec:
       protocol: TCP
       port: 8000
       targetPort: 8000
-      NodePort: 20100
+      nodePort: 20100
     - name: postgresql
       protocol: TCP
       port: 5432
       targetPort: 5432
-      NodePort: 20200
+      nodePort: 20200
