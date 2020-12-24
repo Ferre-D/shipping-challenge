@@ -6,7 +6,7 @@ metadata:
     app: shippingchallenge
 spec:
   selector:
-    type: LoadBalancer
+    type: ClusterIP
     app: shippingchallenge-deployment
   ports:
     - name: apache-php
