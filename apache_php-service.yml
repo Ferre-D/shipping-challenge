@@ -1,21 +1,20 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Service
 metadata:
-  name: shippingchallenge
+  name: shippingchallenge-service
   labels:
-    app: shippingchallenge
+    app: shippingchallenge-service
 spec:
+  type: LoadBalancer
   selector:
-    type: LoadBalancer
     app: shippingchallenge-deployment
   ports:
-    - name: apache-php
+    - name: php-apache
       protocol: TCP
       port: 8000
       targetPort: 8000
       nodePort: 20100
-    - name: postgresql
-      protocol: TCP
+    - name: databasepgsql
       port: 5432
       targetPort: 5432
       nodePort: 20200
