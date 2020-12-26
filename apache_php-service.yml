@@ -13,8 +13,8 @@ spec:
       protocol: TCP
       port: 8000
       targetPort: 8000
-      nodePort: 20100
+      nodePort: 30100
     - name: databasepgsql
       port: 5432
       targetPort: 5432
-      nodePort: 20200
+      nodePort: 30200
