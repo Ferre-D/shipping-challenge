@@ -16,12 +16,12 @@ spec:
     spec:
      containers:
      - name: apache-php
-       image: ferred/lap_shippingchallenge
+       image: ferred/lap_shippingchallenge:latest
        imagePullPolicy: Always
        ports:
        - containerPort: 8000
      - name: postgresql
-       image: ferred/postgres_shippingchallenge
+       image: ferred/postgres_shippingchallenge:latest
        envFrom:
          - configMapRef:
              name: config-postgresql
