@@ -11,8 +11,8 @@ spec:
   ports:
     - name: php-apache
       protocol: TCP
-      port: 8000
-      targetPort: 8000
+      port: 5000
+      targetPort: 5000
       nodePort: 30100
     - name: databasepgsql
       port: 5432
