@@ -19,7 +19,7 @@ spec:
        image: ferred/lap_shippingchallenge:latest
        imagePullPolicy: Always
        ports:
-       - containerPort: 8080
+       - containerPort: 80
      - name: postgresql
        image: ferred/postgres_shippingchallenge:latest
        envFrom:
